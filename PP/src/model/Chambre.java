@@ -14,7 +14,7 @@ public class Chambre {
         this.reservee = false;
     }
 
-    public int getIdCham() { return id; }
+    public int getId() { return id; }
     public String getType() { return type; }
     public double getPrix() { return prix; }
     public boolean isReservee() { return reservee; }

@@ -19,7 +19,7 @@ public class AdminController {
 
     // Méthodes pour gérer les chambres
     public void ajouterChambre(Chambre chambre) {
-        chambres.put(chambre.getIdCham(), chambre);
+        chambres.put(chambre.getId(), chambre);
     }
 
     public void modifierChambre(int id, Chambre chambre) {
