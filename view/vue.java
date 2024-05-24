@@ -1,5 +1,8 @@
 package view;
 
-public co {
+public class vue {
+
+    
+} {
     
 }
