@@ -5,11 +5,11 @@ public class Reservation {
     private int id;
     private int roomId;
     private int userId;
-    private Date checkInDate;
-    private Date checkOutDate;
+    private PP.src.model.Date checkInDate;
+    private PP.src.model.Date checkOutDate;
     private String statut;
 
-    public Reservation(int id, int roomId, int userId, Date checkInDate, Date checkOutDate, String statut) {
+    public Reservation(int id, int roomId, int userId, PP.src.model.Date checkInDate, PP.src.model.Date checkOutDate, String statut) {
         this.id = id;
         this.roomId = roomId;
         this.userId = userId;
@@ -30,11 +30,11 @@ public class Reservation {
         return userId;
     }
 
-    public Date getCheckInDate() {
+    public PP.src.model.Date getCheckInDate() {
         return checkInDate;
     }
 
-    public Date getCheckOutDate() {
+    public PP.src.model.Date getCheckOutDate() {
         return checkOutDate;
     }
 

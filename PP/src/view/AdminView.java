@@ -22,9 +22,10 @@ public class  AdminView {
     }
 
     private void initUI() {
-        JFrame frame = new JFrame("Admin Dashboard");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800, 600);
+        JFrame fenetre2 = new JFrame("Admin Dashboard");
+        fenetre2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        fenetre2.setSize(400, 250);
+        fenetre2.setLocation(100,50);
 
         // Boutons et autres composants pour l'interface admin
         JButton ajouterChambreBtn = new JButton("Ajouter Chambre");
@@ -35,9 +36,9 @@ public class  AdminView {
                     // Code pour ajouter une chambre
                     Chambre chambre = new Chambre(1, "Simple", 100.0);
                     adminController.ajouterChambre(chambre);
-                    JOptionPane.showMessageDialog(frame, "Chambre ajoutée avec succès!");
+                    JOptionPane.showMessageDialog(fenetre2, "Chambre ajoutée avec succès!");
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(frame, "Erreur: " + ex.getMessage());
+                    JOptionPane.showMessageDialog(fenetre2, "Erreur: " + ex.getMessage());
                 }
             }
         });
@@ -50,9 +51,9 @@ public class  AdminView {
                     // Code pour modifier une chambre
                     Chambre chambre = new Chambre(1, "Double", 150.0);
                     adminController.modifierChambre(1, chambre);
-                    JOptionPane.showMessageDialog(frame, "Chambre modifiée avec succès!");
+                    JOptionPane.showMessageDialog(fenetre2, "Chambre modifiée avec succès!");
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(frame, "Erreur: " + ex.getMessage());
+                    JOptionPane.showMessageDialog(fenetre2, "Erreur: " + ex.getMessage());
                 }
             }
         });
@@ -64,9 +65,9 @@ public class  AdminView {
                 try {
                     // Code pour supprimer une chambre
                     adminController.supprimerChambre(1);
-                    JOptionPane.showMessageDialog(frame, "Chambre supprimée avec succès!");
+                    JOptionPane.showMessageDialog(fenetre2, "Chambre supprimée avec succès!");
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(frame, "Erreur: " + ex.getMessage());
+                    JOptionPane.showMessageDialog(fenetre2, "Erreur: " + ex.getMessage());
                 }
             }
         });
@@ -78,9 +79,9 @@ public class  AdminView {
                 try {
                     // Code pour accepter une réservation
                     adminController.accepterReservation(1);
-                    JOptionPane.showMessageDialog(frame, "Réservation acceptée!");
+                    JOptionPane.showMessageDialog(fenetre2, "Réservation acceptée!");
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(frame, "Erreur: " + ex.getMessage());
+                    JOptionPane.showMessageDialog(fenetre2, "Erreur: " + ex.getMessage());
                 }
             }
         });
@@ -92,21 +93,21 @@ public class  AdminView {
                 try {
                     // Code pour décliner une réservation
                     adminController.declinerReservation(1);
-                    JOptionPane.showMessageDialog(frame, "Réservation déclinée!");
+                    JOptionPane.showMessageDialog(fenetre2, "Réservation déclinée!");
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(frame, "Erreur: " + ex.getMessage());
+                    JOptionPane.showMessageDialog(fenetre2, "Erreur: " + ex.getMessage());
                 }
             }
         });
 
         // Ajout des composants au frame
-        frame.getContentPane().add(ajouterChambreBtn);
-        frame.getContentPane().add(modifierChambreBtn);
-        frame.getContentPane().add(supprimerChambreBtn);
-        frame.getContentPane().add(accepterReservationBtn);
-        frame.getContentPane().add(declinerReservationBtn);
+        fenetre2.getContentPane().add(ajouterChambreBtn);
+        fenetre2.getContentPane().add(modifierChambreBtn);
+        fenetre2.getContentPane().add(supprimerChambreBtn);
+        fenetre2.getContentPane().add(accepterReservationBtn);
+        fenetre2.getContentPane().add(declinerReservationBtn);
 
-        frame.setVisible(true);
+        fenetre2.setVisible(true);
     }
     
 } 

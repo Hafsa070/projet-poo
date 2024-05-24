@@ -16,6 +16,8 @@ public class ClientView {
         initUI();
     }
 
+
+
     private void initUI() {
         JFrame frame = new JFrame("Client Dashboard");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
