@@ -1,4 +1,4 @@
-
+package PP.src.model;
 
 public class Admin extends Utilisateur {
 

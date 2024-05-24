@@ -1,3 +1,4 @@
+package PP.src.model;
 
 
 public class Chambre {
@@ -13,7 +14,7 @@ public class Chambre {
         this.reservee = false;
     }
 
-    public int getId() { return id; }
+    public int getIdCham() { return id; }
     public String getType() { return type; }
     public double getPrix() { return prix; }
     public boolean isReservee() { return reservee; }

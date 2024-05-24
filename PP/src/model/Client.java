@@ -1,3 +1,4 @@
+package PP.src.model;
 
 
 public class Client extends Utilisateur {
