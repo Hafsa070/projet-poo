@@ -1,10 +1,10 @@
 package PP.src.view;
 
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import PP.src.controleur.AdminController;
 import PP.src.controleur.ClientController;
 
@@ -14,18 +14,19 @@ public class LoginView {
     }
 
     private void initUI() {
-        JFrame fenetre1 = new JFrame("Login");
-        fenetre1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        fenetre1.setSize(400, 200);
-        fenetre1.setLocationRelativeTo(null);
+        JFrame frame = new JFrame("Login");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 250); // Augmenter la hauteur pour mieux espacer les composants
+        frame.setLocationRelativeTo(null); // Centrer la fenêtre
 
         // Panel principal avec layout BorderLayout et fond bleu clair
         JPanel mainPanel = new JPanel(new BorderLayout());
         mainPanel.setBackground(new Color(173, 216, 230)); // Couleur bleu clair
 
         // Panel pour les champs de texte et le bouton
-        JPanel inputPanel = new JPanel(new GridLayout(3, 1, 5, 5)); // 3 lignes, 1 colonne, espacement de 5 pixels
+        JPanel inputPanel = new JPanel(new GridLayout(4, 1, 5, 10)); // 4 lignes, 1 colonne, espacement de 5 pixels horizontalement et 10 pixels verticalement
         inputPanel.setBackground(new Color(240, 248, 255)); // Couleur blanc cassé
+        inputPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20)); // Marge intérieure de 20 pixels
 
         // Champs de texte pour l'ID et le mot de passe
         JTextField zondeid = new JTextField();
@@ -53,7 +54,7 @@ public class LoginView {
                     // Ouvrir l'interface client
                     new ClientView(new ClientController());
                 } else {
-                    JOptionPane.showMessageDialog(fenetre1, "Identifiants incorrects");
+                    JOptionPane.showMessageDialog(frame, "Identifiants incorrects");
                 }
             }
         });
@@ -69,14 +70,7 @@ public class LoginView {
         mainPanel.add(inputPanel, BorderLayout.CENTER);
 
         // Ajout du panel principal au frame
-        fenetre1.getContentPane().add(mainPanel);
-
-        fenetre1.setVisible(true);
+        frame.getContentPane().add(mainPanel);
+        frame.setVisible(true);
     }
 }
-
-
-
-
-
-

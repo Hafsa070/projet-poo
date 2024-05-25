@@ -1,10 +1,6 @@
 package PP.src.controleur;
-
-
-
 import PP.src.model.Chambre;
 import PP.src.model.Reservation;
-
 import java.util.HashMap;
 import java.util.Map;
 
